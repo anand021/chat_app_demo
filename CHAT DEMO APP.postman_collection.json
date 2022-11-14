@@ -1,0 +1,363 @@
+{
+	"info": {
+		"_postman_id": "ce315b19-efbd-4872-a00d-3a8d6bff9231",
+		"name": "CHAT DEMO APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "like_message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNWI2MDI4MTgtNjg1Mi00OTBkLTkzYmItODFjODIwZGE1ZmJkIiwidXNlcm5hbWUiOiJ0ZXN0QGdtYWlsLmNvbSIsImV4cCI6MTY2ODQ1MTMzNCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjY4NDUwNDM0fQ.7HV86jv8nARuArETd5YeUzisvNLWIlAoWDk_t6me-B4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"message_id\": \"d47de4bba12f488792c276598d9cb342\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/groups/messages/like_message",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"groups",
+						"messages",
+						"like_message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SEND message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNWI2MDI4MTgtNjg1Mi00OTBkLTkzYmItODFjODIwZGE1ZmJkIiwidXNlcm5hbWUiOiJ0ZXN0QGdtYWlsLmNvbSIsImV4cCI6MTY2ODQ0OTk1MCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjY4NDQ5MDUwfQ.60qGjT-zQCpQzQ0r5SauwC8SWPAbiUq_GQyCtbC2dJE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"message\": \"some text here\",\n\"group\": \"e99702497b51486fb81d14c2dc49ab90\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/groups/messages",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"groups",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete group",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNWI2MDI4MTgtNjg1Mi00OTBkLTkzYmItODFjODIwZGE1ZmJkIiwidXNlcm5hbWUiOiJ0ZXN0QGdtYWlsLmNvbSIsImV4cCI6MTY2ODQ0ODg5OSwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjY4NDQ3OTk5fQ.jidd5wQmtuO9e3jwo5sZpOBWJTiz3cMKJyWzuD3v_9Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\": \"7ba5f10b-f8cd-4b95-b4a4-e6d2ac274065\",\n\"members\": [\"5b6028186852490d93bb81c820da5fbd\"]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/groups/app_groups/delete_group",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"groups",
+						"app_groups",
+						"delete_group"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add members to group",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNWI2MDI4MTgtNjg1Mi00OTBkLTkzYmItODFjODIwZGE1ZmJkIiwidXNlcm5hbWUiOiJ0ZXN0QGdtYWlsLmNvbSIsImV4cCI6MTY2ODQ0Nzg1MSwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjY4NDQ2OTUxfQ.1jfS6apGED5o5fmhu8A3rj5rfdUzaA53kf0mYRF73CY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"anand\",\n\"members\": [\"5b6028186852490d93bb81c820da5fbd\"]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/groups/app_groups/7ba5f10b-f8cd-4b95-b4a4-e6d2ac274065",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"groups",
+						"app_groups",
+						"7ba5f10b-f8cd-4b95-b4a4-e6d2ac274065"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create group",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNWI2MDI4MTgtNjg1Mi00OTBkLTkzYmItODFjODIwZGE1ZmJkIiwidXNlcm5hbWUiOiJ0ZXN0QGdtYWlsLmNvbSIsImV4cCI6MTY2ODQ0NjkzNiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjY4NDQ2MDM2fQ.RzuSEjxbsGm_UzzknG64iqARFCVtHjM_dbN2ReW_RR0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"anand\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/groups/app_groups",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"groups",
+						"app_groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit user",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNWI2MDI4MTgtNjg1Mi00OTBkLTkzYmItODFjODIwZGE1ZmJkIiwidXNlcm5hbWUiOiJ0ZXN0QGdtYWlsLmNvbSIsImV4cCI6MTY2ODQwMzQ3NiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjY4NDAyNTc2fQ.zLKC4nuMz5yGlLEYCs6SprI2Z2TEDcHBXycCwxewKDI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"full_name\": \"anand\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/app_users/5b602818-6852-490d-93bb-81c820da5fbd",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"app_users",
+						"5b602818-6852-490d-93bb-81c820da5fbd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNWI2MDI4MTgtNjg1Mi00OTBkLTkzYmItODFjODIwZGE1ZmJkIiwidXNlcm5hbWUiOiJ0ZXN0QGdtYWlsLmNvbSIsImV4cCI6MTY2ODQwMjE1NiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjY4NDAxMjU2fQ.gCILa9holRZ5LKztlOtnzRSfGRhRM_T_6kQjad6CBw8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"test@gmail.com\",\n\"password\": \"Password@123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/app_users/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"app_users",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"test@gmail.com\",\n\"password\": \"Password@123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/app_users/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"app_users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNWI2MDI4MTgtNjg1Mi00OTBkLTkzYmItODFjODIwZGE1ZmJkIiwidXNlcm5hbWUiOiJ0ZXN0QGdtYWlsLmNvbSIsImV4cCI6MTY2ODQwMjE5MywiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjY4NDAxMjkzfQ.7GL8qLiKq5coxFd0plXVropzaBOfYW63wqHbym-RMSU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"test@gmail.com\",\n\"password\": \"Password@123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/app_users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"app_users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
